@@ -1,0 +1,194 @@
+<!--
+#첫 페이지
+코로나바이러스감염증-19(COVID-19)글자 삽입
+정보,예방조치안내,마스크 사진, 위드코로나,news로 메뉴바 삽입
+이름,생년월일,핸드폰번호를 입력할 수 있는 로그인 폼 삽입
+관련 이미지 삽입
+1차 접종과 접종 완료의 크기를 원호로 삽입
+코로나19 예방접종, 중대본 Live 글자를 삽입하여 클릭 시 관련 페이지, 비디오로 이동
+발생현황, 병상현황을 표로 삽입
+누적 사망, 누적 확진자 수를 삽입
+질병관리청콜센터 1339와 질병관리청 이미지 삽입
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>웹프로그래밍 수업 실습</title>
+    <style>
+      tr:hover {
+        background: skyblue;
+      }
+    </style>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1><center>코로나바이러스감염증-19(COVID-19)</center></h1>
+      </div>
+    </header>
+    <nav id="login">
+      <form name="fo" method="get">
+        이름 :<input type="text" size="15" value="" /> 생년월일 :<input
+          type="password"
+          size="15"
+          value=""
+        />
+        핸드폰번호:<input type="text" size="15" value="" />
+        <input type="submit" value="완료" />
+      </form>
+    </nav>
+    <nav id="listbar">
+      <ul>
+        <li style="font-size: 1.5em">
+          <ol>
+            <li><a href="web-infof.html">정보</a></li>
+            <li><a href="web-infos.html">예방조치안내</a></li>
+            <li>
+              <a href="#"
+                ><img
+                  src="textbooks/ banners/mask.jpg"
+                  height="70"
+                  width="100"
+              /></a>
+            </li>
+            <li></li>
+            <li><a href="web-infot.html">위드코로나</a></li>
+            <li><a href="web-infofo.html">news</a></li>
+          </ol>
+        </li>
+      </ul>
+    </nav>
+    <div id="a">
+      <img
+        src="textbooks/ banners/index.jpg"
+        height="2450"
+        width="1224"
+        padding="18"
+      />
+    </div>
+    <div class="first">
+      <h3>1차 접종(83.1%)</h3>
+      <canvas
+        id="mycanvas"
+        style="background-color: aliceblue"
+        width="200"
+        height="200"
+      ></canvas>
+      <script>
+        var canvas = document.getElementById("mycanvas");
+        var context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.strokeStyle = "blue";
+        context.lineWidth = 20;
+        context.arc(100, 100, 50, 0, 1.8 * Math.PI, false);
+        context.stroke();
+      </script>
+    </div>
+    <div class="second">
+      <h3>접종 완료(80.4%)</h3>
+      <canvas
+        id="mycanvass"
+        style="background-color: aliceblue"
+        width="200"
+        height="200"
+      ></canvas>
+      <script>
+        var canvass = document.getElementById("mycanvass");
+        var context = canvass.getContext("2d");
+
+        context.beginPath();
+        context.strokeStyle = "blue";
+        context.lineWidth = 20;
+        context.arc(100, 100, 50, 0, 1.7 * Math.PI, false);
+        context.stroke();
+      </script>
+    </div>
+    <div class="live">
+      <h4><a href="index-s.html">코로나19 예방 접종 알아보기</a></h4>
+      <strong
+        ><h4><a
+          href="https://www.youtube.com/embed/kdca?list=PLQ1C5YbGRe_ICEIyhKlFv5CrENv38quKk&autoplay=1"
+          >중대본 Live</a
+        ></h4></strong
+      >
+    </div>
+    <br>
+    <hr />
+    <br />
+    <div class="fv">
+      <table border="1">
+        <caption>
+          발생현황
+        </caption>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>사망</th>
+            <th>재원 위중증</th>
+            <th>신규 입원</th>
+            <th>확진</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>일일</td>
+            <td>70</td>
+            <td>752</td>
+            <td>626</td>
+            <td>5,352</td>
+          </tr>
+          <tr>
+            <td>최근 7일간 일평균</td>
+            <td>45</td>
+            <td>697</td>
+            <td>673</td>
+            <td>4432</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sv">
+      <table border="1">
+        <caption>
+          병상현황
+        </caption>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>가동률</th>
+            <th>보유병상</th>
+            <th>가용병상</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>중환자 병상</td>
+            <td>80.6%</td>
+            <td>1205</td>
+            <td>234</td>
+          </tr>
+          <tr>
+            <td>일반 병상</td>
+            <td>70.1%</td>
+            <td>11,511</td>
+            <td>3,445</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h4>누적 사망: 3,809 누적 확진자 수: 467,907<h4>
+    <hr>
+    <div class="lf">
+      <h6>질병관리청콜센터 1339</h6>
+    </div>
+    <div class="ls">
+        <img src="textbooks/ banners/질병관리청.png" 
+        width="60"
+        height="20"
+        />
+    </div>
+  </body>
+</html>
